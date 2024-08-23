@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends "AppCoder/index.html" %}
+
+    {%load static %}
+
+    {%block quecambia %}
+ <form action="/AppCoder/cursos" method="POST">
+    {% csrf_token %}
+
+    <h2>Ingrese un curso</h2>
+    <p>Curso: <input type="text" name="curso"></p>
+    <p>Camada: <input type="text" name="camada"></p>
+
+    <input type="submit" value="Enviar"></p>
+
+
+ </form>
+
+    
+    {%endblock%}
+</body>
+</html>
