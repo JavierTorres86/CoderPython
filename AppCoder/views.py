@@ -20,6 +20,7 @@ def cursos(request):
      
      return render(request, 'appcoder/cursos.html')
 
+
 def estudiantes(request):
      
      if request.method =="POST":
@@ -41,14 +42,19 @@ def profesores(request):
 
 
 
-def busquedaCamada(request):
+def busqueda(request):
+       return render(request, 'appcoder/busqueda.html')
+
+    
+
+def buscar(request): 
      if request.GET["camada"]:
-          camada= request.Get['camada']
+          camada = request.Get['camada']
           cursos = Curso.objects.filter(camada__icontains=camada)
-          return render(request,"appcoder/busquedaCamada.html", {"cursos":cursos, "camada":camada})
+          return render(request,"appcoder/resultadoBusqueda.html", {"cursos":cursos, "camada":camada})
      
      else:
           respuesta = "No enviaste datos"
 
 
-     return HttpResponse(respuesta)
+          return HttpResponse(respuesta)

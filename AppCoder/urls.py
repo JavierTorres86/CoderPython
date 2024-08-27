@@ -6,8 +6,11 @@ urlpatterns = [
     path('cursos', views.cursos, name = 'cursos'),
     path('profesores', views.profesores, name = 'profesores'),
     path('estudiantes', views.estudiantes, name = 'estudiantes'),
-    path('entregables/', views.entregables, name = 'entregables'),
-    path('busquedaCamada', views.busquedaCamada, name = 'busquedaCamada')
+    path('entregables', views.entregables, name = 'entregables'),
+    path('busqueda', views.busqueda, name = 'busqueda'),
+    path('buscar/', views.buscar)
+
+
 
    
 ]

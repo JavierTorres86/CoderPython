@@ -11,13 +11,17 @@
     {%load static %}
 
     {%block quecambia %}
- <form action="/AppCoder/busquedaCamada" method="POST">
+    <form action="/AppCoder/resultadoBusqueda" method="POST">
     {% csrf_token %}
 
     <h2>Ingrese un numero</h2>
-    <p>Camada: <input type="number" name="curso" id= "camada"></p>
+    <p>Camada: <input type="number" name="camada" id= "camada"></p>
    
 
     <input type="submit" value="Buscar"></p>
+
+ </form>
+     {%endblock%}
+
 </body>
 </html>
