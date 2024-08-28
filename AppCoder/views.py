@@ -49,7 +49,7 @@ def busqueda(request):
 
 def buscar(request): 
      if request.GET["camada"]:
-          camada = request.Get['camada']
+          camada = request.GET['camada']
           cursos = Curso.objects.filter(camada__icontains=camada)
           return render(request,"appcoder/resultadoBusqueda.html", {"cursos":cursos, "camada":camada})
      
@@ -58,3 +58,9 @@ def buscar(request):
 
 
           return HttpResponse(respuesta)
+     
+
+
+def resultadoBusqueda(request):
+
+ return render(request, 'appcoder/resultadoBusqueda.html')

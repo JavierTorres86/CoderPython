@@ -17,10 +17,10 @@
 
  {% if cursos %}
  <ul>
-    {% for curso un cursos %}
+    {% for curso in cursos %}
          <li>{{curso.nombre}}</li>
          <li>{{curso.camada}}</li>
-    {% endfor %}
+ {% endfor %}
 </ul>  
 
 {% endif%}
