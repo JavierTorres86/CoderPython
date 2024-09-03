@@ -6,18 +6,10 @@ urlpatterns = [
     path('inicio/', views.inicio, name = 'inicio'),
     path('cursos', views.cursos, name = 'cursos'),   
     path('estudiantes', views.estudiantes, name = 'estudiantes'),
-    path('entregables', views.entregables, name = 'entregables'),
     path('busqueda', views.busqueda, name = 'busqueda'),
     path('buscar/', views.buscar),
-
-
     path('profesores', views.profesores, name = 'profesores'),
    
-
-    path('leerEstudiantes/', views.leerEstudiantes, name= 'leerEstudiantes'),
-    path('eliminarEstudiante/<estudiante_nombre>/', views.eliminarEstudiante, name="EliminarEstudiante")
-
-
    
 ]
 

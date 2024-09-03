@@ -19,9 +19,6 @@ from django.urls import path,include
 from Proyecto1.views import saludo,probando_template,agregar_curso
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('saludo/', saludo),
-    path('plantillas/', probando_template),
-    path('agregar_curso/<nom>/<cam>', agregar_curso),
-    path('AppCoder/', include('AppCoder.urls'))
+    path('AppCoder/', include('AppCoder.urls')),
+    path('users/', include('users.urls'))
 ]
