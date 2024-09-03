@@ -12,14 +12,14 @@
 
     {%block quecambia %}
    
-    <button>
-        <a href="{% url 'EstudianteNew' %}"> Agregar Estudiantes</a>
-    </button>
+    <form action="" method="POST">
+        {% csrf_token %}
 
-    <button>
-        <a href="{% url 'EstudianteList' %}"> Listar Estudiantes</a>
-    </button>
-    
+        {{ form.as_p }}
+        <input type="submit" value="Enviar">
+
+    </form>
+   
     {%endblock%}
 </body>
 </html>

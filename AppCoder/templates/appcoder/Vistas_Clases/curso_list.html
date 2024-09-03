@@ -11,14 +11,26 @@
     {%load static %}
 
     {%block quecambia %}
-   
-    <button>
-        <a href="{% url 'EstudianteNew' %}"> Agregar Estudiantes</a>
-    </button>
+    {% for p in cursos %}
+
+    <p>Nombre: <i>{{ p.nombre }}</i></p>
+    <p>Camada: <i>{{ p.camada }}</i></p>
 
     <button>
-        <a href="{% url 'EstudianteList' %}"> Listar Estudiantes</a>
+        <a href="{% url 'CursoDelete' p.id %}"> Eliminar</a>
     </button>
+    <button>
+        <a href="{% url 'CursoEdit' p.id %}">Editar</a>
+    </button>
+
+{% endfor %}
+
+<br>
+
+<button>
+<a href="{% url 'CursoNew' %}">Agregar otro Curso</a>
+</button>
+
     
     {%endblock%}
 </body>

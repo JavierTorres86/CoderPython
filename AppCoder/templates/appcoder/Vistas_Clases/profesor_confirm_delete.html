@@ -12,14 +12,14 @@
 
     {%block quecambia %}
    
-    <button>
-        <a href="{% url 'EstudianteNew' %}"> Agregar Estudiantes</a>
-    </button>
+    <form action="" method="POST">
+        {% csrf_token %}
 
-    <button>
-        <a href="{% url 'EstudianteList' %}"> Listar Estudiantes</a>
-    </button>
-    
+        <p>¿Estás seguro que deseas borrar el Profesor "{{ object }}"?</p>
+        <input type="submit" value="Borrar">
+
+    </form>
+   
     {%endblock%}
 </body>
 </html>

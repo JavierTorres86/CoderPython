@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cursos</title>
 </head>
 <body>
     {% extends "AppCoder/index.html" %}
@@ -11,15 +11,15 @@
     {%load static %}
 
     {%block quecambia %}
-   
-    <button>
-        <a href="{% url 'EstudianteNew' %}"> Agregar Estudiantes</a>
-    </button>
+    <form action="" method="POST">
+        {% csrf_token %}
+  
+    <h2>Ingrese un Curso</h2>
+    <p>Nombre: <input type="text" name="nombre"></p>
+    <p>Camada: <input type="text" name="camada"></p>
 
-    <button>
-        <a href="{% url 'EstudianteList' %}"> Listar Estudiantes</a>
-    </button>
-    
+    <input type="submit" value="Enviar"></p>
+
     {%endblock%}
 </body>
 </html>

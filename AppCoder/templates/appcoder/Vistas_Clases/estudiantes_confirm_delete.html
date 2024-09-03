@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENTREGABLES</title>
+    <title>Document</title>
 </head>
 <body>
     {% extends "AppCoder/index.html" %}
@@ -11,7 +11,15 @@
     {%load static %}
 
     {%block quecambia %}
-    <h1>ESTOS SON LOS ENTREGABLES</h1>
+   
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <p>¿Estás seguro que deseas borrar el Estudiante "{{ object }}"?</p>
+        <input type="submit" value="Borrar">
+
+    </form>
+   
     {%endblock%}
 </body>
 </html>
